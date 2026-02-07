@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Lionel Jevon — Portfolio</title>
+  <meta name="description" content="Lionel Jevon - Creative Software Engineer">
+  <meta name="keywords" content="Lionel, Software Engineer, Backend, Mobile">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Quick inline theme tweaks: add yellow accent + adjust primary -->
+  <style>
+    :root{
+      --bs-primary: #0d6efd; /* keep blue as base */
+      --bs-accent: #f6c84c;  /* yellow accent */
+    }
+    /* simple accent usage override for hero buttons and highlights */
+    .btn-primary { background: linear-gradient(90deg,var(--bs-primary), #1976d2); border: none; }
+    .btn-outline { color: var(--bs-primary); border-color: rgba(13,110,253,0.15); }
+    .hero-title .typed { color: var(--bs-primary); }
+    .stat-label { color:#6c757d; display:block; font-size:.95rem; margin-top:.25rem; }
+    .stat-item span.purecounter{ color:#111; font-weight:700; display:block; font-size:1.6rem; }
+    /* floating cards accent */
+    .floating-card { background: #fff; border-radius:12px; padding:10px 14px; display:inline-flex; gap:10px; align-items:center; box-shadow:0 8px 20px rgba(25,118,210,0.06); }
+    .floating-card i { font-size:1.25rem; color:var(--bs-primary); }
+    .floating-card.card-2 i { color: var(--bs-accent); } /* make second card yellow */
+    .skill-icon i { font-size:22px; color:var(--bs-primary); }
+    /* profile/site name */
+    .sitename { font-weight:700; color:#0b63d6; }
+    /* skills summary stat circles */
+    .stat-circle { width:58px; height:58px; border-radius:50%; background:linear-gradient(180deg,var(--bs-accent), #ffd66b); display:flex; align-items:center; justify-content:center; margin-right:12px; }
+    .skills-summary h3 { margin-bottom:10px; }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <!-- keep image but user said skip replacing image for now -->
+          <img src="photos/foto-asik.jpeg" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
+          <h1 class="sitename">Lionel Jevon</h1>
+        </a>
+
+        <div class="social-links text-center">
+          <a href="instagram.com/lionel.j1212" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/lionel-jevon-cp/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/franzole" class="github"><i class="bi bi-github"></i></a>
+        </div>
+
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row g-0 align-items-center">
+
+          <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+            <div class="content-wrapper">
+              <h1 class="hero-title">Hi, Im <span class="typed" data-typed-items="Software Engineer,Mobile Developer, Freelancer, Backend Engineer"></span></h1>
+              <p class="lead">I build reliable backend systems, cross-platform mobile apps, and full-stack web applications. Passionate about clean code, pragmatic architecture, and shipping value.</p>
+
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item d-inline-block me-4">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="2">12</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item d-inline-block me-4">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2">3</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item d-inline-block">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">5</span>
+                  <span class="stat-label">Happy Clients</span>
+                </div>
+              </div>
+
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+              </div>
+
+              <div class="social-links" data-aos="fade-up" data-aos-delay="400" style="margin-top:18px">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/lionel-jevon-chrismana-putra-08a2a2397/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/Franzole"><i class="bi bi-github"></i></a>
+                <a href="https://instagram.com/lionel.j1212"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-container">
+              <div class="floating-elements mb-3">
+                <!-- 3 cards replaced: backend, mobile, fullstack -->
+                <div class="floating-card card-1 me-2" data-aos="zoom-in" data-aos-delay="300">
+                  <i class="bi bi-server"></i>
+                  <span>Backend Dev</span>
+                </div>
+                <div class="floating-card card-2 me-2" data-aos="zoom-in" data-aos-delay="400">
+                  <i class="bi bi-phone"></i>
+                  <span>Mobile Dev</span>
+                </div>
+                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
+                  <i class="bi bi-layers"></i>
+                  <span>Fullstack Dev</span>
+                </div>
+              </div>
+              <img src="photos/foto-asik.jpeg" alt="Portfolio Hero" class="img-fluid hero-main-image">
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>About</h2>
+        <p>About me — short &amp; to the point</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-image-wrapper">
+              <div class="profile-image">
+                <img src="photos/foto.jpeg" alt="Profile" class="img-fluid">
+              </div>
+              <div class="signature-section">
+                <!-- keep signature decorative -->
+                <p class="quote">"Shipping reliable software, one small iteration at a time."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <div class="intro">
+                <h2>Hi, I'm Lionel Jevon — Creative Software Engineer</h2>
+              </div>
+
+              <div class="skills-grid">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="skill-icon">
+                    <i class="bi bi-server"></i>
+                  </div>
+                  <h4>Backend Development</h4>
+                  <p>APIs, databases, authentication, and reliable server-side architecture.</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+                  <div class="skill-icon">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <h4>Mobile Development</h4>
+                  <p>Cross-platform mobile apps with a focus on performance and UX.</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="skill-icon">
+                    <i class="bi bi-laptop"></i>
+                  </div>
+                  <h4>Fullstack Development</h4>
+                  <p>From databases to frontend — pragmatic full product delivery.</p>
+                </div>
+              </div>
+
+              <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300" style="margin-top:18px">
+                <div class="timeline-item">
+                  <div class="year">2024</div>
+                  <div class="description">Internship — Hexa Integra IT Workshop (Intern Software Engineer)</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2025</div>
+                  <div class="description">Graduated — SMK Negeri 2 Buduran (Rekayasa Perangkat Lunak)</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2025</div>
+                  <div class="description">Accepted — Universitas Negeri Surabaya (Manajemen Informatika) — (2025 - Present)</div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
+                <div class="fun-fact">
+                  <span class="emoji">💡</span>
+                  <span class="text">Based in Surabaya — I like clean APIs and smell of tea.</span>
+                </div>
+                <div class="action-buttons" style="margin-top:12px">
+                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#resume" class="btn btn-outline ms-2">Download Resume</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="skills-grid">
+              <div class="row g-4">
+                <!-- keep skill categories but they reflect Lionel's stack -->
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Frontend &amp; Fullstack</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">HTML/CSS</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">JavaScript</span>
+                          <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">React / Vue</span>
+                          <span class="skill-percentage">72%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Frontend Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-server"></i>
+                      <h3>Backend Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Laravel</span>
+                          <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Databases</span>
+                          <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Firebase</span>
+                          <span class="skill-percentage">72%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Backend Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-phone"></i>
+                      <h3>Mobile Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Flutter</span>
+                          <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Kotlin</span>
+                          <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Mobile Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-cloud"></i>
+                      <h3>DevOps &amp; Tools</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Docker</span>
+                          <span class="skill-percentage">72%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Git</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End DevOps Card -->
+                </div>
+              </div>
+            </div><!-- End Skills Grid -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
+              <h3>Professional Expertise</h3>
+              <p>Backend systems, mobile apps, and end-to-end product delivery — focused on reliability, maintainability, and clear APIs.</p>
+
+              <div class="summary-stats" style="margin-top:18px;">
+                <div class="stat-item d-flex align-items-center mb-3" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="stat-circle">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Years Experience</span>
+                  </div>
+                </div>
+
+                <div class="stat-item d-flex align-items-center mb-3" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="stat-circle">
+                    <i class="bi bi-diagram-3"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Projects Completed</span>
+                  </div>
+                </div>
+
+                <div class="stat-item d-flex align-items-center" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="stat-circle">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Happy Clients</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-badges" data-aos="fade-up" data-aos-delay="600" style="margin-top:18px;">
+                <h4>Technologies</h4>
+                <div class="badge-list">
+                  <div class="skill-badge">Node.js</div>
+                  <div class="skill-badge">Flutter</div>
+                  <div class="skill-badge">MySQL/Postgres</div>
+                  <div class="skill-badge">Laravel</div>
+                </div>
+              </div>
+            </div><!-- End Skills Summary -->
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Resume</h2>
+        <p>Short professional history</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="experience-section">
+              <div class="section-header">
+                <h2><i class="bi bi-briefcase"></i> Professional Journey</h2>
+                <p>Key role so far</p>
+              </div>
+
+              <div class="experience-cards">
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Intern Software Engineer</h3>
+                      <h4>Hexa Integra IT Workshop</h4>
+                    </div>
+                    <span class="duration">2024 - 2025</span>
+                  </div>
+                  <div class="card-body">
+                    <p>Worked on internal tooling and feature components, assisted in API development, testing, and deployment workflows.</p>
+                    <ul class="achievements">
+                      <li>Collaborated on backend endpoints and integration tests</li>
+                      <li>Improved build scripts and local dev environments</li>
+                      <li>Participated in code reviews and team stand-ups</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="education-section">
+              <div class="section-header">
+                <h2><i class="bi bi-mortarboard"></i> Education</h2>
+                <p>Academic background</p>
+              </div>
+
+              <div class="education-timeline">
+                <div class="timeline-track"></div>
+
+                <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                  <div class="timeline-marker"></div>
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>SMK Negeri 2 Buduran — Rekayasa Perangkat Lunak</h3>
+                      <span class="year">2022 - 2025</span>
+                    </div>
+                    <h4 class="institution">SMK Negeri 2 Buduran</h4>
+                    <p>Vocational high school focused on software engineering and practical application development.</p>
+                  </div>
+                </div>
+
+                <div class="education-item" data-aos="slide-up" data-aos-delay="400">
+                  <div class="timeline-marker"></div>
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>Universitas Negeri Surabaya — Manajemen Informatika</h3>
+                      <span class="year">2025 - Present</span>
+                    </div>
+                    <h4 class="institution">Universitas Negeri Surabaya</h4>
+                    <p>Undergraduate studies in Informatics Management (started 2025).</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Services</h2>
+        <p>What I can help you build</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <!-- Card 1: Mobile Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3>Mobile Development</h3>
+              <p>Cross-platform mobile apps (Flutter / React Native) focused on performance and UX.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 2: Backend Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-server"></i>
+              </div>
+              <h3>Backend Development</h3>
+              <p>Design and implement APIs, database schemas, and reliable server-side systems.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 3: Software Engineer (Full Service) -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h3>Software Engineer</h3>
+              <p>End-to-end delivery: from prototyping and architecture to deployment and monitoring.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Portfolio</h2>
+        <p>Selected projects — website, mobile, and desktop apps</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">
+              <i class="bi bi-grid-3x3"></i> All Projects
+            </li>
+            <li data-filter=".filter-website">
+              Website Development
+            </li>
+            <li data-filter=".filter-mobile">
+              Mobile Development
+            </li>
+            <li data-filter=".filter-desktop">
+              Desktop and IoT Development
+            </li>
+          </ul>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <!-- Example item -> Website Development -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Website Development</div>
+                      <h3 class="entry-title">SMKRevit Restaurant</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery-website" data-glightbox="title: SMKRevit; description: A responsive restaurant e-commrtce and management site with CMS integration.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/SMKRevit-Resto-Management">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+                        <!-- Example item -> Website Development -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Website Development</div>
+                      <h3 class="entry-title">SocietyProject Project Management</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery-website" data-glightbox="title: SocietyProject; description: a Project Management Web Application with Task Tracking and Collaboration Features.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/Project-Personal/tree/main/Web/Project%20Management">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <!-- Example item -> Mobile Development -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Mobile Development</div>
+                      <h3 class="entry-title">D'Salon</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox" data-gallery="portfolio-gallery-mobile" data-glightbox="title: E-Learning App; description: Cross-platform mobile salon management Systems.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/D-Salon-Salon-Management">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+                        <!-- Example item -> Mobile Development -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Mobile Development</div>
+                      <h3 class="entry-title">Penger Finovate</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" data-gallery="portfolio-gallery-mobile" data-glightbox="title: Penger Finovate; description: Mobile Financial Personal Tracker App.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/Penger-Finovate">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <!-- Example item -> Desktop Development -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-desktop">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Desktop and IoT Development</div>
+                      <h3 class="entry-title">PureDrop</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox" data-gallery="portfolio-gallery-desktop" data-glightbox="title: PureDrop; description: Water Dispenser Vending Machine with IoT Integration for Remote Monitoring and Control.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://puredrop.cloud">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <!-- additional items can be categorized similarly -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Website Development</div>
+                      <h3 class="entry-title">Goodang</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" data-gallery="portfolio-gallery-website" data-glightbox="title: Goodang; description: Warehousing Web and Mobile Apps with Features of Data Analytics, POS, and AI Chatbot.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/Goodang">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Mobile Development</div>
+                      <h3 class="entry-title">ClothesRent</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox" data-gallery="portfolio-gallery-mobile" data-glightbox="title: Clothes Rent; description: Mobile POS Fashion and Clothing Renting Application.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://github.com/FranzOle/ClothesRent">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Mobile Development</div>
+                      <h3 class="entry-title">Laundry ITBPos</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox" data-gallery="portfolio-gallery-mobile" data-glightbox="title: Laundry ITBPos; description: Mobile POS Laundry Application ITBrain.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.itbrain.laundry">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <!-- ... keep other items but ensure categories match filters above -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+        <p>Reach out for collaborations or opportunities</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <p>Prefer email for professional inquiries.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Location</h4>
+                  <p>Surabaya, Jawa Timur, Indonesia</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone</h4>
+                  <p>+62 895-1459-0179</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email</h4>
+                  <p>lioneljevon1212@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+              <p>Send a message and I'll get back to you.</p>
+
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Lionel Jevon</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/lionel.j1212/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/lionel-jevon-cp/"><i class="bi bi-linkedin"></i></a>
+        <a href="github.com/franzole"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
