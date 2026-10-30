@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengalaman & Organisasi — Lionel Jevon</title>
+  <meta name="description" content="Riwayat karier software engineer, kepemimpinan ormawa, kepanitiaan nasional, dan jejak akademik Lionel Jevon.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0B1220', 900: '#080D17', 800: '#0F1A2E', 700: '#16233D' },
+            blue: { DEFAULT: '#2F6FED', 600: '#2F6FED', 700: '#1B4FC4', 100: '#E7EFFF' },
+            amber: { DEFAULT: '#F5C84C', 400: '#F5C84C', 500: '#E8B22C' },
+            ink: '#0F172A',
+            muted: '#64748B',
+          },
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .display { font-family: 'Outfit', sans-serif; }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+    ::selection { background: #F5C84C; color: #0B1220; }
+    .timeline-rail { position: relative; }
+    .timeline-rail::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 17px;
+      width: 2px;
+      background: rgba(148, 163, 184, 0.2);
+    }
+    .dark .timeline-rail::before {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-navy-900 dark:text-slate-100 antialiased selection:bg-amber-400 selection:text-navy min-h-screen flex flex-col justify-between transition-colors duration-200">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 py-4 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-14 bg-white/90 dark:bg-navy-800/80 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full px-5 shadow-sm dark:shadow-xl transition-colors">
+        
+        <!-- Brand -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+          <div class="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-blue-500/50 group-hover:ring-amber-400 transition-all">
+            <img src="photos/foto-asik.jpeg" alt="Lionel Jevon" class="w-full h-full object-cover" onerror="this.src='photos/foto.jpeg'">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-sm tracking-wide text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors">Lionel Jevon</span>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400 mono leading-none">Software Dev</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1 font-medium text-sm">
+          <a href="index.html" class="px-3.5 py-1.5 rounded-full text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" data-i18n="nav.home">Beranda</a>
+          <a href="projects.html" class="px-3.5 py-1.5 rounded-full text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" data-i18n="nav.projects">Proyek</a>
+          <a href="experience.html" class="px-3.5 py-1.5 rounded-full text-slate-900 dark:text-white bg-slate-200/70 dark:bg-white/10 font-semibold" data-i18n="nav.experience">Pengalaman</a>
+          <a href="credentials.html" class="px-3.5 py-1.5 rounded-full text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" data-i18n="nav.credentials">Prestasi & Lisensi</a>
+          <a href="index.html#contact" class="px-3.5 py-1.5 rounded-full text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" data-i18n="nav.contact">Kontak</a>
+        </nav>
+
+        <!-- Right Side: Theme Toggle & Bilingual Switch -->
+        <div class="flex items-center gap-2.5">
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="w-8 h-8 rounded-full grid place-items-center bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-amber-400 transition-colors" title="Toggle Light/Dark Mode" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun"></i>
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon hidden"></i>
+          </button>
+
+          <!-- Bilingual Switcher -->
+          <div class="flex items-center bg-slate-100 dark:bg-navy-900 border border-slate-200 dark:border-white/10 rounded-full p-0.5 text-xs">
+            <button class="lang-switch-btn px-2.5 py-1 rounded-full transition-all" data-lang-btn="id">ID</button>
+            <button class="lang-switch-btn px-2.5 py-1 rounded-full transition-all" data-lang-btn="en">EN</button>
+          </div>
+
+          <a href="index.html#contact" class="hidden sm:inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors shadow-sm">
+            <span data-i18n="nav.talk">Hubungi Saya</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button id="mobile-toggle" class="md:hidden w-8 h-8 grid place-items-center rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white" aria-label="Toggle menu">
+            <i data-lucide="menu" id="icon-menu" class="w-4 h-4"></i>
+            <i data-lucide="x" id="icon-x" class="w-4 h-4 hidden"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="md:hidden hidden max-w-6xl mx-auto px-5 mt-3">
+      <div class="bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-2xl flex flex-col gap-1 text-sm font-medium">
+        <a href="index.html" class="px-4 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 flex items-center justify-between" data-i18n="nav.home">
+          <span>Beranda</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="projects.html" class="px-4 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 flex items-center justify-between" data-i18n="nav.projects">
+          <span>Proyek (19)</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="experience.html" class="px-4 py-2.5 rounded-xl bg-blue-600 text-white font-semibold flex items-center justify-between" data-i18n="nav.experience">
+          <span>Pengalaman & Organisasi</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="credentials.html" class="px-4 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 flex items-center justify-between" data-i18n="nav.credentials">
+          <span>Prestasi & Lisensi</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="index.html#contact" class="px-4 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 flex items-center justify-between" data-i18n="nav.contact">
+          <span>Kontak</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="pt-32 pb-24">
+    <div class="max-w-5xl mx-auto px-5 lg:px-8">
+      
+      <!-- Header Banner -->
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 dark:bg-amber-400/10 border border-blue-200 dark:border-amber-400/20 text-blue-600 dark:text-amber-400 text-xs font-semibold mono mb-3">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+          <span data-i18n="exp.header_tag">Perjalanan Profesional</span>
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-900 dark:text-white mb-4" data-i18n="exp.header_title">
+          Pengalaman & Organisasi
+        </h1>
+        <p class="text-slate-600 dark:text-slate-300 text-base max-w-2xl leading-relaxed" data-i18n="exp.header_subtitle">
+          Rekam jejak karier teknologi, keterlibatan aktif kepengurusan, dan pencapaian akademik.
+        </p>
+      </div>
+
+      <!-- Tab Buttons Switcher -->
+      <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 mb-12 shadow-sm dark:shadow-lg transition-colors">
+        <button class="exp-tab-btn active flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow transition-all" data-target="tab-tech">
+          <i data-lucide="code-2" class="w-4 h-4"></i>
+          <span data-i18n="exp.tab_tech">Teknologi & Industri</span>
+        </button>
+        <button class="exp-tab-btn flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all" data-target="tab-leadership">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span data-i18n="exp.tab_leadership">Kepemimpinan & Organisasi</span>
+        </button>
+        <button class="exp-tab-btn flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all" data-target="tab-education">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+          <span data-i18n="exp.tab_education">Pendidikan & Akademik</span>
+        </button>
+      </div>
+
+      <!-- ================= TAB 1: TECH & WORK ================= -->
+      <div id="tab-tech" class="tab-pane space-y-8 timeline-rail">
+        <!-- Rendered dynamically by JavaScript based on active language -->
+      </div>
+
+      <!-- ================= TAB 2: LEADERSHIP & COMMUNITY ================= -->
+      <div id="tab-leadership" class="tab-pane hidden space-y-8 timeline-rail">
+        <!-- Rendered dynamically by JavaScript based on active language -->
+      </div>
+
+      <!-- ================= TAB 3: EDUCATION ================= -->
+      <div id="tab-education" class="tab-pane hidden space-y-8 timeline-rail">
+        <!-- Rendered dynamically by JavaScript based on active language -->
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-100 dark:bg-navy-900 border-t border-slate-200 dark:border-white/10 py-10 text-slate-500 dark:text-slate-400 text-sm transition-colors">
+    <div class="max-w-6xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-800 dark:text-white">Lionel Jevon</span>
+        <span>•</span>
+        <span class="text-xs">D4 Manajemen Informatika UNESA</span>
+      </div>
+      <p class="text-xs">
+        © <span id="current-year">2026</span> Lionel Jevon Chrismana Putra. <span data-i18n="footer.rights">Hak cipta dilindungi undang-undang.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white grid place-items-center shadow-2xl opacity-0 pointer-events-none translate-y-4 transition-all duration-300 z-40">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/experience-data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/site.js"></script>
+
+  <!-- Dynamic Experience Rendering & Tab Switcher Script -->
+  <script>
+    function renderExperience() {
+      const currentLang = i18n.currentLang || 'id';
+
+      // 1. Tab Tech & Industry
+      const tabTech = document.getElementById('tab-tech');
+      if (tabTech && typeof EXPERIENCE_DATA !== 'undefined' && EXPERIENCE_DATA.tech) {
+        tabTech.innerHTML = EXPERIENCE_DATA.tech.map(item => {
+          const roleText = item.role[currentLang] || item.role.id;
+          const periodText = item.period[currentLang] || item.period.id;
+          const bulletsHtml = item.bullets ? `
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 mb-5">
+              ${(item.bullets[currentLang] || item.bullets.id).map(b => `
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                  <span>${b}</span>
+                </li>
+              `).join('')}
+            </ul>
+          ` : '';
+
+          const tagsHtml = item.tags ? `
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              ${item.tags.map(t => `<span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300">${t}</span>`).join('')}
+            </div>
+          ` : '';
+
+          return `
+            <div class="relative pl-12">
+              <div class="absolute left-2.5 top-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-slate-100 dark:ring-navy-900 border-2 border-white"></div>
+              <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 transition-all shadow-sm dark:shadow-xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                  <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">${roleText}</h3>
+                  <span class="text-xs font-semibold mono text-amber-700 dark:text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full w-fit">
+                    ${periodText}
+                  </span>
+                </div>
+                <p class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-1.5">
+                  <i data-lucide="building-2" class="w-4 h-4"></i> ${item.company}
+                </p>
+                ${bulletsHtml}
+                ${tagsHtml}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Tab Leadership & Community
+      const tabLeadership = document.getElementById('tab-leadership');
+      if (tabLeadership && typeof EXPERIENCE_DATA !== 'undefined' && EXPERIENCE_DATA.leadership) {
+        tabLeadership.innerHTML = EXPERIENCE_DATA.leadership.map(item => {
+          if (item.items) {
+            return `
+              <div class="relative pl-12">
+                <div class="absolute left-2.5 top-1.5 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-slate-100 dark:ring-navy-900 border-2 border-white"></div>
+                <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-xl space-y-4">
+                  ${item.items.map((sub, idx) => `
+                    <div>
+                      <div class="flex items-center justify-between mb-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-base">${sub.title[currentLang] || sub.title.id}</h4>
+                        <span class="text-xs mono text-slate-500 dark:text-slate-400">${sub.period}</span>
+                      </div>
+                      <p class="text-xs text-slate-500 dark:text-slate-400">${sub.desc[currentLang] || sub.desc.id}</p>
+                    </div>
+                    ${idx < item.items.length - 1 ? '<hr class="border-slate-200 dark:border-white/10">' : ''}
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }
+
+          const roleText = item.role[currentLang] || item.role.id;
+          const periodText = item.period[currentLang] || item.period.id;
+          const descHtml = item.description ? `
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              ${item.description[currentLang] || item.description.id}
+            </p>
+          ` : '';
+
+          const bulletsHtml = item.bullets ? `
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              ${(item.bullets[currentLang] || item.bullets.id).map(b => `
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                  <span>${b}</span>
+                </li>
+              `).join('')}
+            </ul>
+          ` : '';
+
+          return `
+            <div class="relative pl-12">
+              <div class="absolute left-2.5 top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-slate-100 dark:ring-navy-900 border-2 border-white"></div>
+              <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 hover:border-amber-400/30 transition-all shadow-sm dark:shadow-xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                  <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">${roleText}</h3>
+                  <span class="text-xs font-semibold mono text-amber-700 dark:text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full w-fit">
+                    ${periodText}
+                  </span>
+                </div>
+                <p class="text-sm font-medium text-amber-600 dark:text-amber-400 mb-3">${item.organization}</p>
+                ${descHtml}
+                ${bulletsHtml}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 3. Tab Education & Academics
+      const tabEducation = document.getElementById('tab-education');
+      if (tabEducation && typeof EXPERIENCE_DATA !== 'undefined' && EXPERIENCE_DATA.education) {
+        tabEducation.innerHTML = EXPERIENCE_DATA.education.map(item => {
+          const periodText = item.period[currentLang] || item.period.id;
+          const majorText = item.major[currentLang] || item.major.id;
+          const descText = item.description[currentLang] || item.description.id;
+
+          const gpaHtml = item.gpa ? `
+            <div class="inline-flex items-center gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-white/10 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 grid place-items-center">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block">${item.gpaLabel[currentLang] || item.gpaLabel.id}</span>
+                <span class="font-display font-extrabold text-2xl text-amber-600 dark:text-amber-400">${item.gpa} <span class="text-xs text-slate-500 dark:text-slate-400 font-normal">/ 4,00</span></span>
+              </div>
+            </div>
+          ` : '';
+
+          const bulletsHtml = item.bullets ? `
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-white/10 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              ${(item.bullets[currentLang] || item.bullets.id).map(b => `<p>• ${b}</p>`).join('')}
+            </div>
+          ` : '';
+
+          return `
+            <div class="relative pl-12">
+              <div class="absolute left-2.5 top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-slate-100 dark:ring-navy-900 border-2 border-white"></div>
+              <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white">${item.institution}</h3>
+                  <span class="text-xs font-semibold mono text-amber-700 dark:text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full w-fit">
+                    ${periodText}
+                  </span>
+                </div>
+                <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-4">
+                  ${majorText}
+                </p>
+                ${gpaHtml}
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                  ${descText}
+                </p>
+                ${bulletsHtml}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    const tabButtons = document.querySelectorAll('.exp-tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+
+        tabButtons.forEach(b => {
+          b.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow');
+          b.classList.add('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white', 'hover:bg-slate-100', 'dark:hover:bg-white/5');
+        });
+        btn.classList.add('active', 'bg-blue-600', 'text-white', 'shadow');
+        btn.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white', 'hover:bg-slate-100', 'dark:hover:bg-white/5');
+
+        tabPanes.forEach(pane => {
+          if (pane.id === targetId) {
+            pane.classList.remove('hidden');
+          } else {
+            pane.classList.add('hidden');
+          }
+        });
+
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    });
+
+    // Reactive Language Switching
+    window.addEventListener('languageChanged', renderExperience);
+    document.addEventListener('DOMContentLoaded', renderExperience);
+  </script>
+
+</body>
+</html>
