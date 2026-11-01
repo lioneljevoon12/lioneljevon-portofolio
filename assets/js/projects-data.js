@@ -562,35 +562,37 @@ const PROJECTS_DATA = [
   },
   {
     id: "ping-game",
-    title: "PING! — Arcade Reflex Mobile Game",
+    title: "PING! — Cozy Network Simulation & Logic Puzzle Game",
     category: "mobile",
-    categoryLabel: { id: "Game Mobile", en: "Mobile Game" },
-    context: "personal",
-    contextLabel: { id: "Game Development", en: "Game Development" },
+    categoryLabel: { id: "Game Mobile & Edukasi", en: "Mobile & Edu Game" },
+    context: "campus",
+    contextLabel: { id: "Proyek Pemrograman Game", en: "Game Dev Project" },
     award: null,
     status: null,
-    tech: ["Godot Engine", "GDScript", "Physics Engine", "Android Export"],
-    tags: ["Mobile", "Game", "Godot", "GDScript", "Android", "Physics"],
+    tech: ["Godot Engine 4", "GDScript", "Android APK", "AudioStreamGenerator", "Computer Networking"],
+    tags: ["Mobile", "Desktop", "Game", "Godot", "GDScript", "Simulation", "Puzzle", "Education", "Computer Networks", "SDGs"],
     summary: {
-      id: "Game kasual mobile berbasis fisika pantulan bola yang dibangun menggunakan Godot Engine & GDScript.",
-      en: "Fast-paced reflex mobile casual game crafted with Godot Engine and GDScript, exported for Android."
+      id: "Game edukasi interaktif 2D bertema jaringan komputer dengan visual cozy kawaii doodle, time-attack logic puzzle, dan simulasi jaringan standar kurikulum IT.",
+      en: "A 2D cozy kawaii doodle educational game simulating computer networking concepts through time-attack logic puzzles, aligned with IT curriculum."
     },
     description: {
-      id: "PING! adalah game mobile arcade kasual yang dikembangkan dengan Godot Engine 4 dan bahasa pemrograman GDScript. Memanfaatkan engine fisika bawaan Godot untuk simulasi pantulan bola elastis, kontrol sentuh presisi, dan diekspor ke paket Android APK.",
-      en: "PING! is a casual mobile arcade game developed with Godot Engine 4 using GDScript. Leverages Godot's built-in 2D physics engine for elastic ball collisions, responsive touch inputs, and packaged for Android devices via APK."
+      id: "PING! adalah game simulasi dan teka-teki logika 2D edukatif bertema jaringan komputer yang dikembangkan dengan Godot Engine 4.x (GDScript) untuk Android dan PC. Mengusung semangat SDGs Goal 4 (Pendidikan Berkualitas), game ini mentransformasi materi jaringan yang abstrak (pengkabelan UTP T568A/B, subnetting IPv4 CIDR, routing, hingga 7 OSI Layer & TCP 3-way handshake) menjadi gameplay interaktif yang estetik, hangat, dan ramah pemula lewat metode personifikasi data & perangkat.",
+      en: "PING! is an educational 2D simulation and logic puzzle game themed around computer networking, engineered with Godot Engine 4.x (GDScript) for Android and PC. Championing SDGs Goal 4 (Quality Education), it transforms complex networking concepts (UTP T568A/B cable crimping, IPv4 CIDR subnetting, dynamic routing, 7 OSI layers, and TCP 3-way handshakes) into warm, accessible, kawaii doodle gameplay with responsive device personifications."
     },
     keyFeatures: {
       id: [
-        "Dikembangkan dengan Godot Engine 4 menggunakan bahasa GDScript",
-        "Simulasi fisika elastis pantulan bola dengan collision detection presisi",
-        "Kurva kesulitan adaptif yang semakin menantang seiring waktu",
-        "Build native Android APK dengan kontrol sentuh responsif"
+        "5 Stage Kurikulum Jaringan: Mencakup Physical Layer (kabel Straight/Cross, pin RJ45 T568A/B), Addressing (IPv4 & ARP), Subnetting CIDR, Topologi (Star/Ring/Mesh), hingga Transport Layer & OSI 7 Layer",
+        "Eksplorasi Top-Down & Contextual Raycast: Kontrol teknisi via Virtual D-Pad / WASD dengan balon interaksi dinamis untuk membuka minigame pemecahan masalah perangkat",
+        "Time-Attack & Star Rating: Tantangan batas waktu dinamis dengan evaluasi 1-3 bintang serta sistem 3 HP tanpa efek frustrasi (animasi komikal karakter pusing)",
+        "In-Game Guidebook Interaktif: Buku panduan animasi halaman terpadu memuat standar TIA/EIA 568A/B, klasifikasi kelas IP, dan diagram arsitektur jaringan",
+        "Audio Synthesizer Prosedural: Engine audio real-time berbasis pure GDScript AudioStreamGenerator dipadukan arsitektur ekspor multiplatform (Android APK & Windows PC)"
       ],
       en: [
-        "Developed natively with Godot Engine 4 using GDScript",
-        "Elastic collision physics engine delivering precise bounce mechanics",
-        "Adaptive difficulty curve steadily scaling velocity over time",
-        "Native Android APK build with low-latency touch controls"
+        "5-Stage Networking Curriculum: Encompasses Physical Layer (Straight/Cross sorting, RJ45 crimping), Addressing (IPv4 & ARP), CIDR Subnetting, Topologies (Star/Ring/Mesh), and Transport/OSI 7 Layers",
+        "Top-Down Exploration & Contextual Raycast: Intuitive technician navigation via Virtual D-Pad / WASD triggering contextual minigames on affected hardware",
+        "Time-Attack & Star Rating: Dynamic countdown puzzles with 1-3 star evaluations and a gentle 3-HP system featuring comical screen bounces instead of harsh fail states",
+        "Interactive In-Game Guidebook: On-demand animated manual detailing TIA/EIA 568A/B wiring, IP address classes, and networking topology diagrams",
+        "Procedural Audio Synthesis: Real-time GDScript AudioStreamGenerator synthesizer engine paired with a multiplatform export pipeline (Android APK & Windows PC)"
       ]
     },
     github: "https://github.com/lioneljevoon12/PING-",
@@ -713,4 +715,8 @@ const PROJECTS_DATA = [
 // Helper to get project by ID
 function getProjectById(id) {
   return PROJECTS_DATA.find(p => p.id === id);
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { PROJECTS_DATA, getProjectById };
 }
